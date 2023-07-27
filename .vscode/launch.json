@@ -10,7 +10,7 @@
       "request": "launch",
       "module": "uvicorn",
       "console": "integratedTerminal",
-      "args": ["sample_python.main:app", "--reload"],
+      "args": ["python_samples.main:app", "--reload"],
       "justMyCode": true
     },
     {
