@@ -27,7 +27,7 @@ repos:
 
   - repo: local
     hooks:
-      - id: unit_tests
+      - id: unittests
         name: run unit tests
         entry: pytest
         language: system
