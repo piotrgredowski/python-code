@@ -24,3 +24,13 @@ Run
 rye sync
 rye shell
 ```
+
+## Cases
+
+- [x] `doctest`
+  - [src/clock_angle](src/clock_angle)
+
+
+- [ ] mutation tests with `mutmut`
+  - [src/clock_angle](src/clock_angle)
+  - [tests/clock_angle/test_clock_angle.py](tests/clock_angle/test_clock_angle.py)
