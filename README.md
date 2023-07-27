@@ -1,3 +1,5 @@
+[![CI](https://github.com/piotrgredowski/python-code/actions/workflows/ci.yml/badge.svg)](https://github.com/piotrgredowski/python-code/actions/workflows/ci.yml)
+
 # Repository for Python related talks/presentations/workshops/demos
 
 ## Setup
