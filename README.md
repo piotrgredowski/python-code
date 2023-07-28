@@ -45,7 +45,9 @@ python -m pytest --doctest-modules src
   - [src/clock_angle](src/clock_angle)
   - [src/_pieces/calculator.py](src/_pieces/calculator.py)
 
-
 - [ ] mutation tests with `mutmut`
   - [src/clock_angle](src/clock_angle)
   - [tests/clock_angle/test_clock_angle.py](tests/clock_angle/test_clock_angle.py)
+
+- [x] `venv` and differences between `conda env` and `venv`
+  - [src/about_venv/venv.md](src/about_venv/venv.md)
