@@ -16,7 +16,14 @@ class Calculator:
     >>> calc.divide(10, 2)
     5.0
 
-    # Storytelling:
+    ### Testing parts we can't predict
+
+    >>> import random
+    >>> a, b = 1 + random.random(), 2
+    >>> calc.add(a, b)
+    3...
+
+    ### Storytelling:
 
     1. Let's prepare some data to use with the calculator. Use for that decimals
 
@@ -41,8 +48,8 @@ class Calculator:
     >>> numbers = [1, 2, 3]
     >>> calc.add(*numbers)
     Traceback (most recent call last):
-        ...
-    TypeError: Calculator.add() takes 3 positional arguments but 4 were given
+    ...
+    TypeError: ...add() takes 3 positional arguments but 4 were given
 
     And that's how we can use `Calculator` and write some story with doctest at the same time
     """
