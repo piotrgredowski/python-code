@@ -25,10 +25,25 @@ rye sync
 rye shell
 ```
 
+## Commands
+
+Test with
+
+```bash
+python -m pytest --doctest-modules src --cov src --cov-report=html
+```
+
+Or without coverage
+
+```bash
+python -m pytest --doctest-modules src
+```
+
 ## Cases
 
 - [x] `doctest`
   - [src/clock_angle](src/clock_angle)
+  - [src/_pieces/calculator.py](src/_pieces/calculator.py)
 
 
 - [ ] mutation tests with `mutmut`
