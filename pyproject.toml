@@ -36,6 +36,9 @@ dev-dependencies = [
     "httpx>=0.24.1",
     "ipython>=8.12.2",
 ]
+excluded-dependencies = [
+    "uvloop",
+]
 
 [tool.hatch.metadata]
 allow-direct-references = true

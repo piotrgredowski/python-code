@@ -10,7 +10,7 @@
       "request": "launch",
       "module": "uvicorn",
       "console": "integratedTerminal",
-      "args": ["python_samples.main:app", "--reload"],
+      "args": ["src.simple_fastapi.main:app", "--reload"],
       "justMyCode": true
     },
     {
