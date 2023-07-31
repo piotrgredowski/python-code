@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="executionMode" value="BINARY" />
+    <option name="sdkUUID" value="15269d72-3b55-4a03-b2c8-fa789e24c88a" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (python-samples)" project-jdk-type="Python SDK" />
+</project>

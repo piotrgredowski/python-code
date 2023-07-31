@@ -92,7 +92,7 @@ exclude = [".venv"]
 [tool.rye]
 managed = true
 dev-dependencies = [
-    "black>=23.7.0",
+    "black[d]>=23.7.0",
     "ruff>=0.0.280",
     "pre-commit>=3.3.3",
     "bandit>=1.7.5",
