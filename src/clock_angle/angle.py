@@ -68,4 +68,8 @@ def between(time: str):
     """
     hour, minutes = split_hours_and_minutes(time)
 
+    if hour not in range(0, 24) or minutes not in range(0, 60):
+        message = f"Invalid time: {time}"
+        raise ValueError(message)
+
     return abs(hours_hand(hour, minutes) - minutes_hand(minutes))

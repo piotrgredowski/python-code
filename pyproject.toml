@@ -97,6 +97,8 @@ select = [
     "RUF",  # Ruff-specific rules
 ]
 
+[tool.ruff.extend-per-file-ignores]
+"tests/**/*.py" = ["PLR2004"]
 
 [tool.ruff.isort]
 known-first-party = ["src"]
