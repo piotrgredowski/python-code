@@ -12,3 +12,5 @@ htmlcov
 
 # venv
 .venv
+
+.DS_Store
