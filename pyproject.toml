@@ -22,12 +22,15 @@ dev-dependencies = [
     "mypy>=1.4.1",
     "httpx>=0.24.1",
     "ipython>=8.12.2",
+    "pytest-xdist>=3.5.0",
 ]
 excluded-dependencies = ["uvloop"]
 
 [tool.hatch.metadata]
 allow-direct-references = true
 
+[tool.hatch.build.targets.wheel]
+packages = ["src/python_samples"]
 # Formatters and linters
 
 [tool.black]
@@ -101,7 +104,7 @@ select = [
 "tests/**/*.py" = ["PLR2004"]
 
 [tool.ruff.isort]
-known-first-party = ["src"]
+known-first-party = ["pytest_samples"]
 force-single-line = true
 
 [tool.mypy]
