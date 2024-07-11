@@ -51,3 +51,6 @@ python -m pytest --doctest-modules src
 
 - [x] `venv` and differences between `conda env` and `venv`
   - [src/about_venv/venv.md](src/about_venv/venv.md)
+
+- presentations:
+  - [Renaming on steroids with AI code assistants](.presentations/08072024_renaming_on_steroids)
