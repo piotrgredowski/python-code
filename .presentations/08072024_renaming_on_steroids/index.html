@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Renaming on steroids with AI code assistants</title>
+  <link rel="icon" type="image/x-icon"
+    href="https://orstedcdn.azureedge.net/-/media/www/images/corp/graphics/icons/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/simple.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <!-- <link rel="preload" href="https://orstedcdn.azureedge.net/Assets_/dist/fonts/OrstedSans-Regular.woff2" as="font"
+    type="font/woff2"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css" />
+  <style>
+    :root {
+      --main-bg-color: white;
+      --main-text-color: black;
+      --heading-color: #4099da;
+      --link-color: #4099da;
+    }
+
+    .reveal {
+      background-color: var(--main-bg-color);
+      color: var(--main-text-color);
+      font-family: "Orsted Sans", "Helvetica Neue", Arial, sans-serif !important;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3,
+    .reveal h4,
+    .reveal h5,
+    .reveal h6 {
+      color: var(--heading-color);
+      font-family: "Orsted Sans", "Helvetica Neue", Arial, sans-serif !important;
+    }
+
+    .reveal a {
+      color: var(--link-color);
+    }
+
+    .reveal .slide-background {
+      padding-bottom: 50px;
+    }
+
+    .reveal footer.footer {
+      position: absolute;
+      bottom: var(--r-block-margin);
+      left: var(--r-block-margin);
+      right: calc(var(--r-block-margin) + 2 * 3.6em);
+      height: var(--r-main-font-size);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      font-size: calc(var(--r-main-font-size) * 0.4);
+    }
+
+    .reveal footer.footer img {
+      height: var(--r-main-font-size);
+      width: auto;
+      object-fit: contain;
+    }
+
+    @media print {
+      .reveal .footer {
+        position: fixed;
+      }
+    }
+
+    .reveal pre.small-code {
+      font-size: 0.4em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <footer class="footer">
+      <a href="https://orsted.com">
+        <img src="https://orstedcdn.azureedge.net/-/media/www/images/corp/graphics/icons/favicon.ico" alt="Orsted logo">
+      </a>
+
+      <span>Piotr Grędowski, Renaming on steroids with AI code assistants, 11.07.2024</span>
+    </footer>
+    <div class="slides">
+      <section>
+        <h1>Renaming on steroids</h1>
+        <p>with AI code assistants</p>
+      </section>
+      <section>
+        <h3>About me:</h3>
+        <div style="column-count: 1;">
+          <div style="text-align: left">
+            <p>👨‍💻 Piotr Grędowski</p>
+            <p>🐍 Full Stack Developer at <a href="https://orsted.com">
+                <img height="40" style="margin: 0"
+                  src="https://orstedcdn.azureedge.net/-/media/www/images/corp/graphics/logos/orsted-logo/orstedlogo_svg.svg" />
+                <!-- <img height="150" style="margin: 0"
+                  src="https://media.licdn.com/dms/image/D4E12AQE7PyImc-uXxQ/article-cover_image-shrink_720_1280/0/1707388600031?e=1726099200&v=beta&t=Mwe_WVt1bpK1XH9sUH37oVcDNuJzs2Ovuu5VGGDXVw8" /> -->
+              </a>
+            <p>🌍 Warsaw, Poland</p>
+            <p style="font-size: 1em;">⛵, 🚴, 3D 🖨️</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Simple renaming, just variable</h3>
+        <!-- div two columns -->
+        <div>
+          <pre class="small-code"><code data-trim data-noescape class="language-python">
+vol, height, width = 200, 10, 20
+Number = int | float
+
+def calculate_depth(vol: Number, height: Number, width: Number) -> Number:
+    return vol / (height * width)
+
+print(
+    f"Having volume {vol} and height {height} and width {width} "
+    f"we get depth {calculate_depth(vol, height, width)}",
+)
+
+</code></pre>
+          <p style="font-size: 0.5em" class="fragment">Two renames later</p>
+          <pre class="fragment small-code"><code data-trim data-noescape class="language-python">
+volume, height, width = 200, 10, 20
+Number = int | float
+
+def calculate_depth(volume: Number, height: Number, width: Number) -> Number:
+    return volume / (height * width)
+
+print(
+    f"Having volume {volume} and height {height} and width {width} "
+    f"we get depth {calculate_depth(volume, height, width)}",
+)
+</code></pre>
+        </div>
+        <aside class="notes">
+        </aside>
+      </section>
+      <section>
+        <h3>Renaming more complicated, not only variable</h3>
+        <div>
+          <pre><code data-trim data-noescape class="language-python">
+def view_basket(basket: dict[str, float]) -> None:
+    if basket:
+        print("\nCurrent Basket:")
+        for item, cost in basket.items():
+            print(f"{item}: ${cost:.2f}")
+        print(f"Total: ${sum(basket.values()):.2f}")
+    else:
+        print("Your basket is empty.")
+
+          </code></pre>
+          <pre class="fragment"><code data-trim data-noescape class="language-python">
+def view_cart(cart: dict[str, float]) -> None:
+    if cart:
+        print("\nCurrent Cart:")
+        for item, cost in cart.items():
+            print(f"{item}: ${cost:.2f}")
+        print(f"Total: ${sum(cart.values()):.2f}")
+    else:
+        print("Your cart is empty.")
+
+</code></pre>
+        </div>
+        <aside class="notes">
+        </aside>
+      </section>
+
+      <section>
+        <h3>Renaming on steroids, changing the context</h3>
+        <video controls>
+          <source src="./_assets/knedlik_to_pasta.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <aside class="notes">
+          I don't like knedliky anymore. I am goint to the Italy. Convert this code to be about pasta not knedliky.
+
+          🤌
+        </aside>
+      </section>
+      <section>
+        <h1>Thank you!</h1>
+        <aside class="notes">
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/markdown/markdown.min.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+      plugins: [RevealHighlight, RevealNotes, RevealMarkdown]
+    });
+
+  </script>
+</body>
+
+</html>

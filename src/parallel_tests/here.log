@@ -1,0 +1,19 @@
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:35.939250 10.0 Slept 0/10.0 secondWAWARNING  root:test_parallel.py:18 2024-04-19T17:31:36.944465 10.0 Slept 1/10.0 secoWARNING  root:test_parallel.py:18 2024-04-19T17:31:37.949431 5.0 Slept 2/5.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:38.954669 5.0 Slept 3/5.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:39.959772 5.0 Slept 4/5.0 seconds
+0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:40.961808 15.0 Slept 5/15.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:41.966979 15.0 Slept 6/15.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:42.971156 20.0 Slept 7/20.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:43.976346 15.0 Slept 8/15.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:44.980848 15.0 Slept 9/15.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:45.984085 20.0 Slept 10/20.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:46.989616 20.0 Slept 11/20.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:47.995170 15.0 Slept 12/15.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:48.999655 20.0 Slept 13/20.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:50.002688 15.0 Slept 14/15.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:51.008256 20.0 Slept 15/20.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:52.012019 20.0 Slept 16/20.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:53.016189 20.0 Slept 17/20.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:54.021732 20.0 Slept 18/20.0 seconds
+WARNING  root:test_parallel.py:18 2024-04-19T17:31:55.023661 20.0 Slept 19/20.0 seconds
