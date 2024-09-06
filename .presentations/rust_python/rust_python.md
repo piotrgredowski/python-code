@@ -30,6 +30,7 @@ revealOptions:
 
 </style>
 
+
 ## How Rust is speeding up Python (bindings and tooling)
 
 "Rust and Python: A Match Made in Heaven\*" <!-- .element: class="fragment" data-fragment-index="1" -->
