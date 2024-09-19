@@ -16,13 +16,13 @@ pip install -r requirements.lock -r requirements-dev.lock
 
 ### Option 2
 
-Install [rye](https://github.com/mitsuhiko/rye).
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 Run
 
 ```bash
-rye sync
-rye shell
+uv sync
+uv venv
 ```
 
 ## Commands
@@ -30,13 +30,13 @@ rye shell
 Test with
 
 ```bash
-python -m pytest --doctest-modules src --cov src --cov-report=html
+uv run pytest --doctest-modules src --cov src --cov-report=html
 ```
 
 Or without coverage
 
 ```bash
-python -m pytest --doctest-modules src
+uv run pytest --doctest-modules src
 ```
 
 ## Cases
