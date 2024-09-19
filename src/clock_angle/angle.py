@@ -1,19 +1,16 @@
 def split_hours_and_minutes(string: str):
-    """
-    Split a string in the format "HH:MM" into a list of integers (HH, MM)
+    """Split a string in the format "HH:MM" into a list of integers (HH, MM)
 
     >>> split_hours_and_minutes("12:34")
     [12, 34]
     >>> split_hours_and_minutes("00:00")
     [0, 0]
     """
-
     return [int(s) for s in string.split(":")]
 
 
 def hours_hand(hour: int, minutes: int):
-    """
-    Calculate the angle of the hour hand
+    """Calculate the angle of the hour hand
 
     >>> hours_hand(12, 0)
     0.0
@@ -32,8 +29,7 @@ def hours_hand(hour: int, minutes: int):
 
 
 def minutes_hand(minutes: int) -> float:
-    """
-    Calculate the angle of the minute hand
+    """Calculate the angle of the minute hand
 
     >>> minutes_hand(0)
     0.0
@@ -48,8 +44,7 @@ def minutes_hand(minutes: int) -> float:
 
 
 def between(time: str):
-    """
-    Calculate the angle between the hour and minute hands of a clock
+    """Calculate the angle between the hour and minute hands of a clock
 
     >>> between("12:00")
     0.0
@@ -68,7 +63,7 @@ def between(time: str):
     """
     hour, minutes = split_hours_and_minutes(time)
 
-    if hour not in range(0, 24) or minutes not in range(0, 60):
+    if hour not in range(24) or minutes not in range(60):
         message = f"Invalid time: {time}"
         raise ValueError(message)
 

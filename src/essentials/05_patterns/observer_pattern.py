@@ -7,6 +7,7 @@ class Subscriber(abc.ABC):
     def update(self, message: str) -> None:
         pass
 
+
 # Subject
 class Publisher(abc.ABC):
     def __init__(self) -> None:
@@ -23,27 +24,6 @@ class Publisher(abc.ABC):
     @abc.abstractmethod
     def notify(self) -> None:
         pass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class PressAgency(Publisher):
@@ -68,6 +48,7 @@ class PressAgency(Publisher):
         self._news.append(news)
         self.notify()
 
+
 class CCB(Subscriber):
     def print_news(self, news: str):
         print(f"CCB reports: {news}")
@@ -76,8 +57,8 @@ class CCB(Subscriber):
     def update(self, message: str) -> None:
         self.print_news(message)
 
-class WeeklyMail(Subscriber):
 
+class WeeklyMail(Subscriber):
     def format_news(self, news: str):
         return f"Weekly Mail exclusive news: {news} Only in Weekly Mail!"
 
@@ -90,8 +71,8 @@ class WeeklyMail(Subscriber):
     def update(self, message: str) -> None:
         self.print_news(message)
 
-class TheMoon(Subscriber):
 
+class TheMoon(Subscriber):
     def format_news(self, news: str):
         return f"The Moon reveals: {news}"
 
@@ -100,11 +81,11 @@ class TheMoon(Subscriber):
         print()
 
     def update(self, message: str) -> None:
-        if not "COVID" in message.upper():
+        if "COVID" not in message.upper():
             self.print_news(message)
 
-class IphoneNews(Subscriber):
 
+class IphoneNews(Subscriber):
     def format_news(self, news: str):
         return f"IPHONE NEWS: {news}"
 
@@ -115,6 +96,7 @@ class IphoneNews(Subscriber):
     def update(self, message: str) -> None:
         if "IPHONE" in message.upper():
             self.print_news(message)
+
 
 class NewsSubscriber(Subscriber):
     def __init__(self, name: str):

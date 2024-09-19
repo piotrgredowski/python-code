@@ -1,21 +1,24 @@
 import argparse
-import re
+
 import httpx
-import typing
+
 
 def _get_url_for_country(country_code: str):
     return f"https://rawcdn.githack.com/kamikazechaser/administrative-divisions-db/master/api/{country_code}.json"
 
+
 def get_divisions_for_country(country_code: str):
     return httpx.get(_get_url_for_country(country_code)).json()
 
-def print_divisions(*, country_name: str, divisions: typing.List[str], capital: typing.Union[str, None] = None):
+
+def print_divisions(*, country_name: str, divisions: list[str], capital: str | None = None):
     print("====================================")
     capital_part = f" ({capital})" if capital else ""
     print(f"Divisions for {country_name}{capital_part}:")
     for division in divisions:
         print(f"- {division}")
     print("====================================")
+
 
 argparser = argparse.ArgumentParser()
 

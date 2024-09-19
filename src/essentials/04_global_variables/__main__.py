@@ -1,10 +1,9 @@
 import pathlib
-import typing
 
+from divisions import get_divisions_for_country
+from divisions import print_divisions
 from reader import read_csv
-from divisions import get_divisions_for_country, print_divisions
 from settings import settings
-
 
 
 def main():
@@ -18,11 +17,11 @@ def main():
             continue
         divisions = get_divisions_for_country(country_code)
         print_divisions(
-            country_name=row['Country'],
-            capital=row['Capital'],
-            divisions=divisions
+            country_name=row["Country"],
+            capital=row["Capital"],
+            divisions=divisions,
         )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

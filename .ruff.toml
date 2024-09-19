@@ -1,0 +1,14 @@
+extend = ".ruff.desired.toml"
+
+[lint]
+exclude = ["src/essentials"]
+ignore = [
+    "ANN",
+    "D",
+    "PTH",
+    "T",
+    "ERA",
+    "PLR",
+    "INP",
+    "N999"
+]

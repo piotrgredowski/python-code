@@ -8,7 +8,7 @@ UNIQUE_RESULTS_FILE_NAME = "_unique_results.txt"
 def _slow_sort(arr):
     n = len(arr)
     for i in range(n):
-        for j in range(0, n - i - 1):
+        for j in range(n - i - 1):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
@@ -77,12 +77,12 @@ def main():
         f.write("")
 
     number = 1000
-    data = [random.randint(1, number) for _ in range(number)]
+    data = [random.randint(1, number) for _ in range(number)]  # noqa: S311
 
     start_time = time.time()
 
     sorted_data = sort(data)
-    processed_data = process_data(sorted_data)
+    processed_data = process_data(sorted_data)  # noqa: F841
 
     end_time = time.time()
 

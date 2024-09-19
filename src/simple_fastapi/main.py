@@ -1,4 +1,4 @@
-"Simple FastAPI application for demo purposes."
+"""Simple FastAPI application for demo purposes."""
 
 import fastapi
 
@@ -9,4 +9,4 @@ app = fastapi.FastAPI()
 def hello(name: str = "World"):
     import random
 
-    return f"Hello, {name}! {random.random()}"
+    return f"Hello, {name}! {random.random()}"  # noqa: S311

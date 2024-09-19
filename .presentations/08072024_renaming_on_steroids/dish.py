@@ -9,8 +9,10 @@ class Knedlik:
         is_healthy_str = "🥗 healthy" if self.is_healthy else "🍄 not healthy"
         return f"<🥟 {self.name} 🥟, is {is_delicious_str} and {is_healthy_str}>"
 
+
 def get_super_funny_name():
     return "Knedleak"
+
 
 def main():
     answer = input(f"Do you want a 🥟 {get_super_funny_name().lower()} 🥟? [yes/of_course] > ")
@@ -29,6 +31,7 @@ def main():
         ]
         knedlist_str = ",\n".join(f"🥟 {knedlik.name}" for knedlik in knedlist)
         print(f"If you change your mind, we have these knedlíky for you:\n{knedlist_str}.")
+
 
 if __name__ == "__main__":
     main()

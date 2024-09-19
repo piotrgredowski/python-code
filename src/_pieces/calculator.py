@@ -1,6 +1,5 @@
 class Calculator:
-    """
-    A simple calculator class.
+    """A simple calculator class.
 
     >>> calc = Calculator()
     >>> calc.add(2, 3)

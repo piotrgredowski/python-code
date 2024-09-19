@@ -13,8 +13,8 @@ def test_it(n):
         if i == n:
             break
 
-        warnings.warn(f"{datetime.datetime.now().isoformat()} {n} Slept {i}/{n} seconds")
+        warnings.warn(f"{datetime.datetime.now().isoformat()} {n} Slept {i}/{n} seconds")  # noqa: B028, DTZ005
         time.sleep(1)
         i += 1
 
-    assert n > 0
+    assert n > 0  # noqa: S101

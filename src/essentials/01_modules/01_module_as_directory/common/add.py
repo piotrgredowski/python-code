@@ -1,8 +1,9 @@
 def _add(a, b):
     return a + b
 
-def _check_if_positive(a):
-    ...
+
+def _check_if_positive(a): ...
+
 
 def add_two_numbers(a, b):
     _check_if_positive(a)
@@ -13,14 +14,15 @@ class Calculator:
     class _Adder:
         def add(self, a, b):
             return a + b
+
     class Subtracter:
         def subtract(self, a, b):
             return a - b
 
-    class Config:
-        ...
+    class Config: ...
 
-Calculator._Adder()
+
+Calculator._Adder()  # noqa: SLF001
 Calculator.Config()
 
 
@@ -38,8 +40,7 @@ plot_2_size = standard_plot_width * plot_size_multiplier[1]
 plot_2_size = 1000 * 0.25
 plot_2_size = 250
 
-#
 
-time_for_timeout = 60 * 60 * 24 # 24 hours
+time_for_timeout = 60 * 60 * 24  # 24 hours
 
-timeout(86400)
+timeout(86400)  # noqa: F821
