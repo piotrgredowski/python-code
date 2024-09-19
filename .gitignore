@@ -14,3 +14,6 @@ htmlcov
 .venv
 
 .DS_Store
+
+*.profile.*
+*results.txt

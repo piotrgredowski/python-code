@@ -11,7 +11,8 @@ For talks, presentations, workshops, demos.
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.lock -r requirements-dev.lock
+pip install pip --upgrade
+pip install -e ".[dev]"
 ```
 
 ### Option 2

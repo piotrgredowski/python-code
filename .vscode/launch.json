@@ -20,6 +20,13 @@
       "program": "${file}",
       "console": "integratedTerminal",
       "justMyCode": true
+    },
+    {
+      "name": "Profile current file",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "cProfile",
+      "args": ["-o", "profile_data.prof", "${file}"]
     }
   ]
 }
