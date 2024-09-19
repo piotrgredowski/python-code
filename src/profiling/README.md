@@ -31,3 +31,25 @@ python -m pyinstrument src/profiling/primes.py
 python -m cProfile -o _profile_data.profile.pstats src/profiling/primes.py
 python -m snakeviz _profile_data.profile.pstats
 ```
+
+## Comparison
+
+`pyinstrument`:
+
+- Sampling profiler
+- Lower overhead
+- Easier to use
+- Built-in visualization
+- Good for quick, high-level analysis
+- May miss very short function calls
+
+`cProfile` with `snakeviz`:
+
+- Deterministic profiler
+- Higher overhead
+- More detailed information
+- Separate visualization tool (snakeviz)
+- Captures all function calls
+- Better for in-depth analysis
+
+Choose pyinstrument for quick, low-impact profiling, and cProfile with snakeviz for comprehensive, detailed analysis.
