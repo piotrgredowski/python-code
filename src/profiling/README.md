@@ -4,8 +4,8 @@
 
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate
-pip install pip --upgrade
+.venv\Scripts\activate # Windows
+# source .venv/bin/activate # Linux/MacOS
 pip install pyinstrument snakeviz
 ```
 
