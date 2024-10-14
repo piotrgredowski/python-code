@@ -8,19 +8,14 @@ UNIQUE_RESULTS_FILE_NAME = "_unique_results.txt"
 def _slow_sort(arr):
     n = len(arr)
     for i in range(n):
-        for j in range(n - i - 1):
+        for j in range(0, n - i - 1):  # noqa: PIE808
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
 
 
-def _fast_sort(arr):
-    return sorted(arr)
-
-
 def sort(*args, **kwargs):
-    return _fast_sort(*args, **kwargs)
-    return _slow_sort(*args, **kwargs)
+    return sorted(*args, **kwargs)
 
 
 def _slow_prime_check(n):
@@ -29,33 +24,31 @@ def _slow_prime_check(n):
     for i in range(2, int(n**0.5) + 1):
         if n % i == 0:
             return False
-    time.sleep(0.01)
+    time.sleep(0.01)  # Simulate slow computation
     return True
 
 
-def _faster_prime_check(n):
+def _fast_prime_check(n):
+    """Check if a number is prime."""
+
     if n < 2:
         return False
-    for i in range(2, int(n**0.5) + 1):
+    for i in range(2, int(n**0.5) + 1):  # noqa: SIM110
         if n % i == 0:
             return False
     return True
 
 
 def prime_check(*args, **kwargs):
-    return _faster_prime_check(*args, **kwargs)
+    return _fast_prime_check(*args, **kwargs)
 
 
-def _slow_make_unique(data):
-    unique = []
-    for item in data:
-        if item not in unique:
-            unique.append(item)
-    return unique
+def _fast_make_unique(data):
+    return list(set(data))
 
 
 def make_unique(*args, **kwargs):
-    return _slow_make_unique(*args, **kwargs)
+    return _fast_make_unique(*args, **kwargs)
 
 
 def _slow_save_items(results, file_name):
@@ -66,13 +59,12 @@ def _slow_save_items(results, file_name):
 
 def _fast_save_items(results, file_name):
     with open(file_name, "a") as f:
-        for item in results:
-            f.write(str(item) + "\n")
+        for result in results:
+            f.write(str(result) + "\n")
 
 
 def save_items(*args, **kwargs):
     return _fast_save_items(*args, **kwargs)
-    # return _slow_save_items(*args, **kwargs)
 
 
 def process_data(data):

@@ -18,13 +18,13 @@
   "python.linting.enabled": false,
   "ruff.organizeImports": true,
   "ruff.fixAll": true,
-  "ruff.lint.args": [
-    "--config",
-    "pyproject.toml"
-  ],
+  "ruff.lint.args": ["--config", "pyproject.toml"],
   "ruff.lint.enable": false,
-  "ruff.format.args": [
-    "--config",
-    "pyproject.toml"
+  "ruff.format.args": ["--config", "pyproject.toml"],
+  "github.copilot.chat.experimental.codeFeedback.instructions": [
+    { "file": ".github/copilot-feedback-instructions.md" }
+  ],
+  "github.copilot.chat.experimental.codeGeneration.instructions": [
+    { "file": ".github/copilot-generation-instructions.md" }
   ]
 }
