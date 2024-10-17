@@ -3,9 +3,10 @@
 ## Setup
 
 ```bash
-python3 -m venv .venv
+python3 -m venv .venv # You can also use conda or virtualenv, your choice
 .venv\Scripts\activate # Windows
 # source .venv/bin/activate # Linux/MacOS
+# conda activate your-environment-name # Conda
 pip install pyinstrument snakeviz
 ```
 

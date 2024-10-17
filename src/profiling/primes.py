@@ -14,12 +14,7 @@ def _slow_sort(arr):
     return arr
 
 
-def _fast_sort(arr):
-    return sorted(arr)
-
-
 def sort(*args, **kwargs):
-    return _fast_sort(*args, **kwargs)
     return _slow_sort(*args, **kwargs)
 
 
@@ -33,17 +28,8 @@ def _slow_prime_check(n):
     return True
 
 
-def _faster_prime_check(n):
-    if n < 2:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-
 def prime_check(*args, **kwargs):
-    return _faster_prime_check(*args, **kwargs)
+    return _slow_prime_check(*args, **kwargs)
 
 
 def _slow_make_unique(data):
@@ -64,15 +50,8 @@ def _slow_save_items(results, file_name):
             f.write(str(item) + "\n")
 
 
-def _fast_save_items(results, file_name):
-    with open(file_name, "a") as f:
-        for item in results:
-            f.write(str(item) + "\n")
-
-
 def save_items(*args, **kwargs):
-    return _fast_save_items(*args, **kwargs)
-    # return _slow_save_items(*args, **kwargs)
+    return _slow_save_items(*args, **kwargs)
 
 
 def process_data(data):
